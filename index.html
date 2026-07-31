@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <link rel="stylesheet" href="/small-JS-projects/rock-paper-scissor-project/rock-paper-scissor-CSS.css">
+
+ 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="random-quote-generator.css">
-</head>
-<body>
+  <title>rock-papers scissors</title>
+
  
-      <button onclick="randomQuote()">Click to know your Quote of the day </button>
-     <div class="js-quote-auhtor quote-auhtor"></div>
+</head>
+
+
+<body>
+  <p class="title">Rock Paper Scissors</p>
+
+  
+  <button onclick="playGame('rock');"
+          class="css-button-style"
+  ><img class="move-icon" src="/rock-paper-scissor-photos/rock.png" ></button>
   
 
+  <button onclick="playGame('paper');"
+          class="css-button-style"
+  ><img class="move-icon" src="/rock-paper-scissor-photos/paper.png" ></button>
+
+  <button onclick="playGame('scissor');"
+          class="css-button-style"
+  ><img class="move-icon" src="/rock-paper-scissor-photos/scissor.png" ></button>
+
+   <p class="js-result css-result"></p>
+
+   <p class="js-moves"> </p>
+
+   <p class="js-score css-score"></p>
+
+
+  
+
+   <button onclick="
+     score.wins=0;
+     score.losses=0;
+     score.ties=0;
+     localStorage.removeItem('score');
+     updateScoreElement();
+   " class="reset-score-button">Reset Score</button>
+
+   <p class="js-score"></p>
+  
 </body>
-<script src="random-quote-generator.js"></script>
+
+<script src="rock-paper-scissors-Js.js"></script>
+
 </html>

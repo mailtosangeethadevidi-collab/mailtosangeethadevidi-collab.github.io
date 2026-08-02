@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devidi Sangeetha | Skills</title>
+  <style>
+    /* Modern Clean Light Theme Palette matching your Portfolio */
+    :root {
+      --bg-main: #f8f9fa;       
+      --card-bg: #ffffff;       
+      --border-color: #e2e8f0;  
+      --text-main: #334155;     
+      --text-bright: #0f172a;   
+      --accent: #0284c7;        
+      --accent-glow: rgba(2, 132, 199, 0.08);
+      --meter-bg: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* Synchronized Navigation Header Bar */
+    nav.navigation {
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    nav.navigation a {
+      color: var(--text-main);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav.navigation a:hover {
+      color: var(--accent);
+    }
+
+    /* Layout Container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+    }
+
+    header h1 {
+      color: var(--text-bright);
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    /* Content Panels */
+    section {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-top: 24px;
+      padding: 32px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    h2 {
+      color: var(--text-bright);
+      border-bottom: 2px solid var(--bg-main);
+      font-size: 1.35rem;
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+    }
+
+    /* Beautiful Skill Grid & Progress Bar Layout */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    @media(min-width: 600px) {
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .skill-bar-wrapper {
+      background: var(--bg-main);
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .skill-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-bright);
+    }
+
+    /* Progress bars */
+    .custom-progress-bg {
+      background-color: var(--meter-bg);
+      border-radius: 10px;
+      height: 8px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .custom-progress-fill {
+      background-color: var(--accent);
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    ul, ol {
+      list-style-position: inside;
+      margin-left: 4px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    summary {
+      font-weight: 600;
+      color: var(--accent);
+      cursor: pointer;
+      outline: none;
+      margin-bottom: 10px;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--accent);
+      background-color: var(--bg-main);
+      padding: 16px;
+      font-style: italic;
+      border-radius: 0 8px 8px 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Navigation Bar -->
+  <nav class="navigation"> 
+    <a href="index.html">Home</a>
+    <a href="education.html">Education</a>
+    <a href="#tech-skills">Core Technical Skills</a>
+    <a href="#environments">Environments & Data</a>
+  </nav>
+
+  <div class="container">
+    <header>
+      <h1>Skills & Competencies</h1>
+    </header>
+
+    <main>
+      <!-- Core Technical Skills (Updated to HTML 70%, CSS 70%, JS 40%) -->
+      <section id="tech-skills">
+        <h2>Web Proficiency Map</h2>
+        <div class="skills-grid">
+          
+          <div class="skill-bar-wrapper">
+            <div class="skill-label-row"><span>HTML5</span><span>70%</span></div>
+            <div class="custom-progress-bg"><div class="custom-progress-fill" style="width: 70%;"></div></div>
+          </div>
+
+          <div class="skill-bar-wrapper">
+            <div class="skill-label-row"><span>CSS3</span><span>70%</span></div>
+            <div class="custom-progress-bg"><div class="custom-progress-fill" style="width: 70%;"></div></div>
+          </div>
+
+          <div class="skill-bar-wrapper">
+            <div class="skill-label-row"><span>JavaScript (ES6+)</span><span>40%</span></div>
+            <div class="custom-progress-bg"><div class="custom-progress-fill" style="width: 40%;"></div></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Web Development & Core Languages Section -->
+      <section>
+        <h2>Web Development & Languages</h2>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 10px;">
+          <div>
+            <h3 style="font-size: 1.05rem; color: var(--text-bright); margin-bottom: 8px;">Core Competencies</h3>
+            <ul>
+              <li>Java</li>
+              <li>C</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+          <div style="margin-top: 10px;">
+            <h3 style="font-size: 1.05rem; color: var(--text-bright); margin-bottom: 8px;">Database Systems</h3>
+            <ul>
+              <li>MySQL: Basic to Intermediate</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Environments & Workflows (Renamed and Streamlined) -->
+      <section id="environments">
+        <h2>Environments</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 10px;">
+          <div>
+            <h3 style="font-size: 1.05rem; color: var(--text-bright); margin-bottom: 8px;">IDEs & Version Control</h3>
+            <ul>
+              <li>Visual Studio Code</li>
+              <li>Eclipse IDE</li>
+              <li>Git & GitHub</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-size: 1.05rem; color: var(--text-bright); margin-bottom: 8px;">Development Routines</h3>
+            <details>
+              <summary>View Daily Split</summary>
+              <ul>
+                <li>Problem Solving Logic: 5 Hours</li>
+                <li>Web Interface Engineering: 3 Hours</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional / Soft Skills Row -->
+      <section>
+        <h2>Professional Attributes</h2>
+        <div class="skills-grid">
+          <div class="skill-bar-wrapper">
+            <div class="skill-label-row"><span>Team Collaboration</span><span>90%</span></div>
+            <div class="custom-progress-bg"><div class="custom-progress-fill" style="width: 90%;"></div></div>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-label-row"><span>Time Management</span><span>95%</span></div>
+            <div class="custom-progress-bg"><div class="custom-progress-fill" style="width: 95%;"></div></div>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-label-row"><span>Effective Communication</span><span>80%</span></div>
+            <div class="custom-progress-bg"><div class="custom-progress-fill" style="width: 80%;"></div></div>
+          </div>
+          <div class="skill-bar-wrapper">
+            <div class="skill-label-row"><span>Technical Leadership</span><span>70%</span></div>
+            <div class="custom-progress-bg"><div class="custom-progress-fill" style="width: 70%;"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Philosophy Quote Block -->
+      <section style="border: none; background-color: transparent; box-shadow: none; padding: 10px 0 0 0;">
+        <blockquote>
+          <q>The beautiful thing about learning is that no one can take it away from you.</q> — B.B. King
+        </blockquote>
+      </section>
+
+      <footer>
+        <p>&copy; 2026 Devidi Sangeetha. All Rights Reserved.</p>
+      </footer>
+    </main>
+  </div>
+
+</body>
+</html>

@@ -3,15 +3,429 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="random-quote-generator.css">
+  <title>Devidi Sangeetha | Portfolio</title>
+  <style>
+    /* Modern Clean Light Theme Palette */
+    :root {
+      --bg-main: #f8f9fa;       
+      --card-bg: #ffffff;       
+      --border-color: #e2e8f0;  
+      --text-main: #334155;     
+      --text-bright: #0f172a;   
+      --accent: #0284c7;        
+      --accent-glow: rgba(2, 132, 199, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    b{
+       color: var(--accent);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      font-size: 17px;
+      font-family: Arial, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 60px;
+      color:black;
+    }
+
+    /* Professional Top Navigation Bar */
+    nav.navigation {
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    nav.navigation a {
+      color: var(--text-main);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav.navigation a:hover {
+      color: var(--accent);
+    }
+
+    /* Layout Container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Hero Profile Headers */
+    header {
+      text-align: center;
+      padding: 50px 20px 30px 20px;
+    }
+
+    .profile-photo {
+      border: 4px solid #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+      height: 140px;
+      object-fit: cover;
+      width: 140px;
+      margin-bottom: 20px;
+    }
+
+    .personal-info h1 {
+      color: var(--text-bright);
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .personal-info h3 {
+      color: var(--accent);
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .personal-info p {
+      color: var(--text-main);
+      font-size: 1.05rem;
+    }
+
+    /* Content Area Panels */
+    section, article {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-top: 24px;
+      padding: 32px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    h2 {
+      color: var(--text-bright);
+      border-bottom: 2px solid var(--bg-main);
+      font-size: 1.35rem;
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    mark {
+      background-color: var(--accent-glow);
+      color: var(--accent);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    /* Stylized bullet points */
+    ul, ol {
+      list-style-position: inside;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: var(--text-main);
+      color:black;
+    }
+
+    /* Premium Blockquote Card */
+    blockquote {
+      border-left: 4px solid var(--accent);
+      background-color: var(--bg-main);
+      padding: 16px;
+      font-style: italic;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Modern Vector Connect Icons */
+    .connect-links {
+      display: flex;
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    .connect-links a {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .connect-links a:hover {
+      transform: translateY(-4px);
+    }
+
+    .connect-links svg {
+      fill: #64748b; 
+      transition: fill 0.2s ease;
+    }
+
+    .connect-links a:hover svg {
+      fill: var(--accent); 
+    }
+
+    /* Footer adjustments */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
- 
-      <button onclick="randomQuote()">Click to know your Quote of the day </button>
-     <div class="js-quote-auhtor quote-auhtor"></div>
+
+  <!-- Clean Floating Top Navigation -->
+  <nav class="navigation"> 
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#profiles">Profiles</a>
+    <a href="#achievements">Achivements</a>
+     <a href="#projects">Projects</a>
+    <a href="#interests">Interests</a>
+    <a href="education.html">Education</a>
+   
+    <a href="#connect">Connect</a>
+     <a href="skills.html">Skills</a>
+
+     
+  </nav>
+
+  <div class="container" id="home">
+    <header>
+      <img class="profile-photo" src="assets/profile-photo" onerror="this.src='https://unsplash.com'" alt="Devidi Sangeetha">
+      <div class="personal-info"> 
+         <h1>Devidi Sangeetha</h1>
+         <h3>Computer Science Engineering Student</h3>
+         <p><strong>"Aspiring Full Stack Developer & Software Engineer"</strong></p>
+      </div>
+    </header>
+
+    <main>
+      <!--  Career Objective Section -->
+      <section>
+        <h2>Career Objective</h2>
+        <p>Driven Computer Science undergraduate with deep foundations in <b>data structures, algorithms, and web development</b>. Looking to contribute to your engineering team as a<b> Software Engineer Intern</b>, utilizing my strong programming logic and passion for full stack development to design high-quality user experiences."</p>
+      </section>
+
+      <!-- About Me Section -->
+      <article id="about">
+        <h2>About Me</h2>
+        <p>Hello! My name is <strong>Devidi Sangeetha</strong>. I am currently pursuing my <b>B.Tech degree in CSE (AIML).</b></p>
+        <p>I specialize in <b>Java programming</b> and have deep foundations in<b> Data Structures and Algorithms </b>, having solved <b>300+ challenges on LeetCode</b>. I love combining this backend logic with frontend web technologies to build efficient full-stack software solutions."</p>
+      </article>
+
+    <!-- Global Profiles Section -->
+<section id="profiles">
+  <h2>Global Platform Profiles</h2>
+  <p style="margin-bottom: 20px;">Explore my algorithmic problem-solving milestones, version-controlled source code repositories, and professional network:</p>
   
+  <div class="profile-links-container" style="display: flex; flex-direction: column; gap: 16px;">
+    
+    <!-- LeetCode Profile -->
+    <a href="https://leetcode.com/u/24AG1A6619/" target="_blank" aria-label="LeetCode Profile" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px;">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFA116"><path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-4.377 4.4a.14.14 0 0 1-.194 0L4.375.414A1.378 1.378 0 0 0 2.428.37a1.4 1.4 0 0 0-.044 1.968l4.33 4.356a1.442 1.442 0 0 0 2.03.004l4.377-4.4A1.377 1.377 0 0 0 13.483 0zm-5.632 9.07a1.442 1.442 0 0 0-2.03-.004L1.447 13.45a1.4 1.4 0 0 0-.008 1.975l4.38 4.4a1.377 1.377 0 0 0 1.94 0l4.38-4.4a1.433 1.433 0 0 0-.012-2.02l-4.286-4.335zM22.56 13.45l-4.38-4.4a1.442 1.442 0 0 0-2.03.004l-4.38 4.4a1.4 1.4 0 0 0 .004 1.975l4.38 4.4a1.375 1.375 0 0 0 1.94 0l4.38-4.4a1.44 1.44 0 0 0 .086-1.98zM24 16.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+      <span style="font-weight: 500; font-size: 1rem;">LeetCode Profile <span style="color: #1648ff; font-weight: 600;">(300+ Solved)</span></span>
+    </a>
+
+    <!-- GitHub Profile -->
+    <a href="https://github.com/mailtosangeethadevidi-collab" target="_blank" aria-label="GitHub Profile" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px;">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#24292e"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      <span style="font-weight: 500; font-size: 1rem;">GitHub Repositories</span>
+    </a>
+
+    <!-- LinkedIn Profile -->
+    <a href="https://www.linkedin.com/in/devidi-sangeetha-69264a32a/" target="_blank" aria-label="LinkedIn Profile" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px;">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#0077b5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      <span style="font-weight: 500; font-size: 1rem;">LinkedIn Professional Network</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- Achievements & Key Milestones Section -->
+<!-- Achievements & Key Milestones Section -->
+<section id="achievements">
+  <h2>Key Achievements & Milestones</h2>
+  <ul style="list-style-type: none; margin-top: 15px;">
+    
+    <!-- Being Zero Bootcamp Win & Selection -->
+    <li style="margin-bottom: 16px; padding-left: 12px; border-left: 3px solid var(--accent);">
+       <strong>Being Zero Technical Bootcamp Champion:</strong> Won **1st Place** on Day 1 and **2nd Place** on Day 3 out of 200+ students. Selected as one of the few top performers to receive advanced Data Structures & Algorithms (DSA) training.
+    </li>
+
+    <!-- Gradious Training Selection -->
+    <li style="margin-bottom: 16px; padding-left: 12px; border-left: 3px solid var(--accent);">
+       <strong>Gradious Elite Training Selection:</strong> Cleared a rigorous screening test in my 1st year to be selected as one of the **top 100 students out of 800+ applicants** for specialized Java DSA training.
+    </li>
+
+    <!-- Hackathons & Certificates -->
+    <li style="margin-bottom: 16px; padding-left: 12px; border-left: 3px solid var(--accent);">
+       <strong>Hackathon Competitor:</strong> Actively participated and engineered project solutions across **3 distinct technical hackathons**.
+      <div class="certificate-gallery" style="display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap;">
+        <img src="assets/hackathon-cert1.png" alt="Hackathon Certificate 1" onerror="this.style.display='none'" style="height: 60px; border: 1px solid var(--border-color); border-radius: 4px;">
+        <img src="assets/hackathon-cert2.png" alt="Hackathon Certificate 2" onerror="this.style.display='none'" style="height: 60px; border: 1px solid var(--border-color); border-radius: 4px;">
+        <img src="assets/hackathon-cert3.png" alt="Hackathon Certificate 3" onerror="this.style.display='none'" style="height: 60px; border: 1px solid var(--border-color); border-radius: 4px;">
+      </div>
+    </li>
+
+    <!-- Talentia Club Quiz Winner -->
+    <li style="margin-bottom: 16px; padding-left: 12px; border-left: 3px solid var(--accent);">
+      <strong>Talentia Club Quiz Winner:</strong> Secured **1st Place** in the technical and logical quiz competition organized by our college's Talentia Club.
+      <div style="margin-top: 8px;">
+        <img src="assets/quiz-cert.png" alt="Talentia Quiz Certificate" onerror="this.style.display='none'" style="height: 60px; border: 1px solid var(--border-color); border-radius: 4px;">
+      </div>
+    </li>
+
+    <!-- Student Placement Coordinator (SPC) - Simplified -->
+    <li style="margin-bottom: 16px; padding-left: 12px; border-left: 3px solid var(--accent);">
+       <strong>Student Placement Coordinator (SPC):</strong> Selected by college management to assist in organizing student placement drives and handling campus recruitment communication.
+    </li>
+
+    <!-- Engineering Team Leader - Simplified -->
+    <li style="margin-bottom: 12px; padding-left: 12px; border-left: 3px solid var(--accent);">
+       <strong>Academic Project Team Leader:</strong> Served as the team leader for a real-time academic project, managing task distribution and core code integration.
+    </li>
+  </ul>
+</section>
+
+<!-- Featured Projects Section -->
+<!-- Featured Projects Section -->
+<section id="projects">
+  <h2>Featured Projects</h2>
+  <p style="margin-bottom: 20px;">A collection of frontend layouts, interactive logical games, and backend applications engineered during my development tracking:</p>
+
+  <div class="projects-container" style="display: flex; flex-direction: column; gap: 20px;">
+    
+    <!-- Category 1: Frontend Structure -->
+    <div style="padding: 16px; background-color: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px;">
+      <h3 style="font-size: 1.1rem; color: var(--text-bright); margin-bottom: 8px;"> Full Stack & Web Interfaces</h3>
+      <ul style="list-style-position: inside; margin-left: 8px;">
+        <li style="margin-bottom: 6px;">
+          <strong>YouTube Clone Homepage:</strong> A fully semantic structural layout replicating the YouTube home interface built entirely using modular <strong>HTML5 and responsive CSS3 Grid/Flexbox</strong>.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Category 2: JavaScript Logic -->
+    <div style="padding: 16px; background-color: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px;">
+      <h3 style="font-size: 1.1rem; color: var(--text-bright); margin-bottom: 8px;"> JavaScript Dynamic Logic Apps</h3>
+      <ul style="list-style-position: inside; margin-left: 8px;">
+        <li style="margin-bottom: 8px;">
+          <strong>E-Commerce Add-to-Cart System:</strong> An interactive frontend system managing state updates, cart arrays, and computational totals dynamically.
+        </li>
+        <li style="margin-bottom: 8px;">
+          <strong>Dynamic Todo List App:</strong> A task utility tool utilizing DOM manipulation techniques to append, remove, and track ongoing data list entries.
+        </li>
+        <li style="margin-bottom: 8px;">
+          <strong>Rock-Paper-Scissors & Heads/Tails Engines:</strong> Interactive game structures handling programmatic logic conditioning and randomized choice generations.
+        </li>
+        <li style="margin-bottom: 6px;">
+          <strong>Random Quote Generator:</strong> A clean script widget displaying string variations using algorithmic randomization arrays.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Category 3: Java Applications -->
+    <div style="padding: 16px; background-color: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px;">
+      <h3 style="font-size: 1.1rem; color: var(--text-bright); margin-bottom: 8px;"> Backend & Console Logic Engines</h3>
+      <ul style="list-style-position: inside; margin-left: 8px;">
+        <li style="margin-bottom: 12px;">
+          <strong>Swiggy Food Delivery Simulator:</strong> An interactive console-based application in <strong>Java</strong> that handles user input menus to pick food items and programmatically processes successful order confirmation flows.
+        </li>
+        <li style="margin-bottom: 6px;">
+          <strong>Banking Transaction Application:</strong> A console-based financial system built with <strong>Java</strong> to securely simulate core banking workflows, including tracking account balance metrics, handling safe deposits, and executing credit and debit logic statements.
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Main GitHub Repository Link Retained and Highlighted -->
+  <p style="margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 16px; text-align: center;">
+    <a href="https://github.com" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+      Explore My Full GitHub Repositories & Active Source Code &rarr;
+    </a>
+  </p>
+</section>
+>
+
+
+
+
+      <!-- Areas of Interest Section -->
+      <section id="interests">
+        <h2>Areas of Interest</h2>
+      
+        <ul >
+          <li>Full Stack Web Development </b>(HTML, CSS, JavaScript)</li>
+          <li>Algorithmic Problem Solving & Data Structures</li>
+          <li>Artificial Intelligence & Machine Learning Applications</li>
+          <li>Participating in Coding Contests and Technincal Activites</li>
+         
+        </ul>
+      </section>
+
+      <!-- Strengths Section -->
+      <section >
+        <h2>Core Strengths</h2>
+        <ol>
+          <li>Analytical Problem Solving</li>
+          <li>Technical Leadership & Collaboration</li>
+          <li>Self Motivation</li>
+          <li>Effective Communication</li>
+        </ol>
+      </section>
+
+      <!-- Projects Link Section -->
+      
+
+      <!-- Favourite Quote Section -->
+     
+
+      <!-- Connect Section -->
+      <section id="connect">
+        <h2>Connect With Me</h2>
+        <div class="connect-links">
+          <a href="https://www.linkedin.com/in/devidi-sangeetha-69264a32a/" target="_blank" aria-label="LinkedIn Profile">
+            <svg width="36" height="36" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://github.com/mailtosangeethadevidi-collab" target="_blank" aria-label="GitHub Profile">
+            <svg width="36" height="36" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2026 Devidi Sangeetha. All Rights Reserved.</p>
+      </footer>
+    </main>
+  </div>
 
 </body>
-<script src="random-quote-generator.js"></script>
 </html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devidi Sangeetha | Education</title>
+  <style>
+    /* Modern Clean Light Theme Palette matching the Main Portfolio */
+    :root {
+      --bg-main: #f8f9fa;       
+      --card-bg: #ffffff;       
+      --border-color: #e2e8f0;  
+      --text-main: #334155;     
+      --text-bright: #0f172a;   
+      --accent: #0284c7;        
+      --accent-glow: rgba(2, 132, 199, 0.08);
+      --table-header-bg: #f1f5f9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* Professional Top Navigation Bar (Identical to Home Page for Seamless Navigation) */
+    nav.navigation {
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    nav.navigation a {
+      color: var(--text-main);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav.navigation a:hover {
+      color: var(--accent);
+    }
+
+    /* Layout Container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+    }
+
+    header h1 {
+      color: var(--text-bright);
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    /* Content Panels */
+    section {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-top: 24px;
+      padding: 32px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    h2 {
+      color: var(--text-bright);
+      border-bottom: 2px solid var(--bg-main);
+      font-size: 1.35rem;
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+    }
+
+    /* High-End Clean Table Styling replacing raw browser borders */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    caption {
+      text-align: left;
+      font-weight: 600;
+      color: var(--text-bright);
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    th {
+      background-color: var(--table-header-bg);
+      color: var(--text-bright);
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+
+    tbody tr:hover {
+      background-color: #fafafa;
+    }
+
+    .highlight-row {
+      font-weight: 600;
+      color: var(--accent);
+      background-color: var(--accent-glow);
+    }
+
+    /* Coursework Grid Cards Layout */
+    .coursework-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .course-badge {
+      background-color: var(--table-header-bg);
+      color: var(--text-bright);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+      display: inline-block;
+    }
+
+    .course-desc {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      align-self: center;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Synchronized Navigation Bar -->
+  <nav class="navigation"> 
+    <a href="index.html">Home</a>
+    <a href="#academic-details">Educational Details</a>
+    <a href="#performance">Semester Performance</a>
+    <a href="#coursework">Core Capabilities</a>
+   
+  </nav>
+
+  <div class="container">
+    <header>
+      <h1>Academic Qualifications</h1>
+    </header>
+
+    <main>
+      <!-- Section 1: Educational Details (Cleaned and Polished) -->
+      <section id="academic-details">
+        <h2>Educational Details</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Qualifications</th>
+              <th>Institution</th>
+              <th>Board/University</th>
+              <th>Year of Passing</th>
+              <th>Percentage/CGPA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>B.Tech (CSE - AI & ML)</td>
+              <td>ACE Engineering College</td>
+              <td>JNTUH</td>
+              <td>2024 - 2028</td>
+              <td style="font-weight: 600; color: var(--accent);">9.28 CGPA</td>
+            </tr>
+            <tr>
+              <td>Intermediate (Class XII)</td>
+              <td>SR Junior College</td>
+              <td>TSBIE</td>
+              <td>2024</td>
+              <td>96% (960 / 1000)</td>
+            </tr>
+            <tr>
+              <td>SSC (Class X)</td>
+              <td>Zilla Praja Parishad Secondary School</td>
+              <td>State Board</td>
+              <td>2022</td>
+              <td>9.2 / 10 GPA</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section 2: Semester Wise Performance -->
+      <section id="performance">
+        <h2>Semester Wise Performance</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Semester</th>
+              <th>SGPA / Grade Points</th>
+              <th>Academic Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Semester I</td>
+              <td>9.45</td>
+              <td>Pass </td>
+            </tr>
+            <tr>
+              <td>Semester II</td>
+              <td>9.55</td>
+              <td>Pass</td>
+            </tr>
+            <tr>
+              <td>Semester III</td>
+              <td>9.00</td>
+              <td>Pass </td>
+            </tr>
+            <tr>
+              <td>Semester IV</td>
+              <td>9.10</td>
+              <td>Pass</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>Overall Cumulative GPA</td>
+              <td>9.28 CGPA</td>
+             <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Custom High-Value Section Added: Core Engineering Capabilities -->
+      <section id="coursework">
+        <h2>Core Coursework & Capabilities</h2>
+        <p style="margin-bottom: 15px; font-size: 0.95rem;">Key engineering competencies acquired through coursework modules and rigorous project implementations:</p>
+        
+        <div class="coursework-grid">
+          <div class="course-badge">Data Structures</div>
+          <div class="course-desc">Algorithmic complexity optimization and memory-efficient logical storage handling using Java and C.</div>
+          
+          <div class="course-badge">Web Tech</div>
+          <div class="course-desc">Building robust front-end interfaces and semantic code rendering layouts using HTML, CSS, and interactive JavaScript.</div>
+          
+        
+          
+          <div class="course-badge">OOP Foundations</div>
+          <div class="course-desc">Executing clean software architectures using polymorphism, inheritance patterns, and object encapsulation.</div>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2026 Devidi Sangeetha. All Rights Reserved.</p>
+      </footer>
+    </main>
+  </div>
+
+</body>
+</html>
